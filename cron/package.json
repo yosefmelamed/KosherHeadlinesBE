@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "fetch": "node cron/fetch.js",
-    "init-db": "node lib/db.js"
+    "init-db": "node lib/db.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.24.0",

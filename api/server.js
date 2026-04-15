@@ -1,3 +1,4 @@
+console.log("BOOT START");
 require('dotenv').config({ path: require('path').join(__dirname, '../.env') });
  
 const express = require('express');
@@ -146,6 +147,8 @@ cron.schedule('0 7 * * *', function() {
   });
 }, { timezone: 'America/New_York' });
  
+
+console.log("ABOUT TO LISTEN");
 // ── Start — listen FIRST, init DB in background ───────────────────────────────
 app.listen(PORT, '0.0.0.0',function() {
   console.log('API server running on port ' + PORT);

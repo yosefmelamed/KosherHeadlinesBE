@@ -1,7 +1,7 @@
 require('dotenv').config({ path: require('path').join(__dirname, '../.env') });
 
 const Parser = require('rss-parser');
-const Anthropic = require('@anthropic-ai/sdk/index.mjs');
+const { Anthropic } = require('@anthropic-ai/sdk');
 const https = require('https');
 const { SOURCES, CATEGORIES } = require('../lib/sources');
 const { initDb, isFetched, insertStories, pruneOldStories } = require('../lib/db');

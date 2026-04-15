@@ -1,0 +1,14 @@
+{
+  "name": "headlines",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["frontend", "api"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=api\" \"npm run dev --workspace=frontend\"",
+    "cron": "node cron/fetch.js",
+    "init-db": "node lib/db.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

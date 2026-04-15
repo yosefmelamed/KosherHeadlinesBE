@@ -1,0 +1,16 @@
+{
+  "name": "headlines-cron",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "fetch": "node cron/fetch.js",
+    "init-db": "node lib/db.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0",
+    "@neondatabase/serverless": "^0.9.3",
+    "dotenv": "^16.4.5",
+    "node-cron": "^3.0.3",
+    "rss-parser": "^3.13.0"
+  }
+}
